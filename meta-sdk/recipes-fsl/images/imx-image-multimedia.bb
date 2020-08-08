@@ -16,14 +16,12 @@ inherit core-image
 
 ## Select Image Features
 IMAGE_FEATURES += " \
-    debug-tweaks \
     tools-profile \
     package-management \
     splash \
     nfs-server \
     tools-debug \
     ssh-server-dropbear \
-    tools-testapps \
     hwcodecs \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', '', \
        bb.utils.contains('DISTRO_FEATURES',     'x11', 'x11-base x11-sato', \
@@ -38,11 +36,9 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-fsl-tools-audio \
     packagegroup-fsl-tools-gpu \
     packagegroup-fsl-tools-gpu-external \
-    packagegroup-fsl-tools-testapps \
-    packagegroup-fsl-tools-benchmark \
-    packagegroup-fsl-gstreamer1.0 \
-    packagegroup-fsl-gstreamer1.0-full \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'weston-init', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'x11 wayland', 'weston-xwayland xterm', '', d)} \
-    ${ERPC_COMPS} \
 "
+# RDEPENDS_${PN}_remove = "ltp valgrind"
+#    packagegroup-fsl-gstreamer1.0 \
+#    packagegroup-fsl-gstreamer1.0-full \
