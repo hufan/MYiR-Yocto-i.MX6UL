@@ -8,8 +8,6 @@ IMAGE_INSTALL_append += " openssl-ptest \
 			  glibc-test \
 			  dhcp-client \
 			  python-dbus python-pip python-pygobject \
-			  bluez5-test \
-			  ofono-tests \
 			  alsa-utils-speakertest \
 			  wayland-ivi-extension-test \
 			"
