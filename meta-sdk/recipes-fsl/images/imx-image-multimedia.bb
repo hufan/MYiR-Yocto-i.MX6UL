@@ -16,11 +16,9 @@ inherit core-image
 
 ## Select Image Features
 IMAGE_FEATURES += " \
-    tools-profile \
     package-management \
     splash \
     nfs-server \
-    tools-debug \
     ssh-server-dropbear \
     hwcodecs \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', '', \
@@ -32,8 +30,6 @@ ERPC_COMPS_append_mx7ulp = "packagegroup-imx-erpc"
 
 CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-full-cmdline \
-    packagegroup-tools-bluetooth \
-    packagegroup-fsl-tools-audio \
     packagegroup-fsl-tools-gpu \
     packagegroup-fsl-tools-gpu-external \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'weston-init', '', d)} \
@@ -42,3 +38,4 @@ CORE_IMAGE_EXTRA_INSTALL += " \
 # RDEPENDS_${PN}_remove = "ltp valgrind"
 #    packagegroup-fsl-gstreamer1.0 \
 #    packagegroup-fsl-gstreamer1.0-full \
+#RPROVIDES_eudev-hwdb_remove = "udev-hwdb"
