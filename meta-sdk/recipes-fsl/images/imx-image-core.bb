@@ -20,7 +20,6 @@ SDKIMAGE_FEATURES_append = " \
 "
 IMAGE_INSTALL += " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', ' weston weston-examples weston-init','', d)} \
-    imx-test \
     packagegroup-imx-core-tools \
 "
 export IMAGE_BASENAME = "imx-image-core"
