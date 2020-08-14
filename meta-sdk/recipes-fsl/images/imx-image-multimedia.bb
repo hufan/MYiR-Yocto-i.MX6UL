@@ -31,10 +31,8 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     packagegroup-core-full-cmdline \
     packagegroup-fsl-tools-gpu \
     packagegroup-fsl-tools-gpu-external \
+    packagegroup-fsl-gstreamer1.0 \
+    packagegroup-fsl-gstreamer1.0-full \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'weston-init', '', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'x11 wayland', 'weston-xwayland xterm', '', d)} \
 "
-# RDEPENDS_${PN}_remove = "ltp valgrind"
-#    packagegroup-fsl-gstreamer1.0 \
-#    packagegroup-fsl-gstreamer1.0-full \
-#RPROVIDES_eudev-hwdb_remove = "udev-hwdb"

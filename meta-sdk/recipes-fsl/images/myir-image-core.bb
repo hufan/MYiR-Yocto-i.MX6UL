@@ -18,5 +18,6 @@ SDKIMAGE_FEATURES_append = " \
 IMAGE_INSTALL += " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', ' weston weston-examples weston-init','', d)} \
     python3 \
+    alsa-utils \
 "
-export IMAGE_BASENAME = "imx-image-core"
+export IMAGE_BASENAME = "myir-image-core"

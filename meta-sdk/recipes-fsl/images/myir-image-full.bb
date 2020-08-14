@@ -21,4 +21,11 @@ IMAGE_INSTALL += " \
     ${OPENCV_PKGS} \
     ${ML_PKGS} \
     python3 \
+    qtquickcontrols \
+    qtquickcontrols2 \
+    qtvirtualkeyboard \
+    qtmultimedia \
+    qt-demo \
 "
+
+IMAGE_INSTALL_append = "ffmpeg alsa-utils"
