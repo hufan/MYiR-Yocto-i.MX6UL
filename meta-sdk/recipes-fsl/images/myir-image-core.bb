@@ -17,7 +17,13 @@ SDKIMAGE_FEATURES_append = " \
 "
 IMAGE_INSTALL += " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', ' weston weston-examples weston-init','', d)} \
-    python3 \
     alsa-utils \
+    ppp-quectel \
+    staticip-network \
+    start-service \
+    mtd-utils-ubifs \
+    mtd-utils \
+    u-boot-imx-fw-utils \
+    myir-rc-local \
 "
 export IMAGE_BASENAME = "myir-image-core"

@@ -26,6 +26,12 @@ IMAGE_INSTALL += " \
     qtvirtualkeyboard \
     qtmultimedia \
     qt-demo \
+    ppp-quectel \
+    staticip-network \
+    start-service \
+    myir-rc-local \
+    u-boot-fw-utils \
+    v4l-utils \
 "
 
-IMAGE_INSTALL_append = "ffmpeg alsa-utils"
+IMAGE_INSTALL_append = "ffmpeg alsa-utils mtd-utils mtd-utils-ubifs"
